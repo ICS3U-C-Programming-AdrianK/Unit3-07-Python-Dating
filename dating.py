@@ -1,30 +1,30 @@
 # /usr/bin/env python3
-# created by : Adrian student 
+# created by : Adrian student
 # Date : 26 OCT 2026
-# This programs tells the grandparents if someone is 
+# This programs tells the grandparents if someone is
 # eligible to date their grandchild
-import constants 
+import constants
 
 
-def main() :
-    # get the candidate age as a string 
+def main():
+    # get the candidate age as a string
     candidate_age_str = input("Enter your age : ")
     print("")
 
-    try :
+    try:
         # cast the candidate age to an integer
-        candidate_age_int = int(candidate_age_str )
+        candidate_age_int = int(candidate_age_str)
 
         # check eligibility
-        if candidate_age_int > constants.MIN and candidate_age_int < constants.MAX :
+        if candidate_age_int > constants.MIN and candidate_age_int < constants.MAX:
             print("you can date my grandchild")
-        elif candidate_age_int <= constants.MIN :
+        elif candidate_age_int <= constants.MIN:
             print("you are too young to date my grandchild")
-        elif candidate_age_int >= constants.MAX :
+        elif candidate_age_int >= constants.MAX:
             print("you are too old to date my grandchild")
-    except ValueError :
-        print("{} is not an integer". format(candidate_age_str))
-    finally :
+    except ValueError:
+        print("{} is not an integer".format(candidate_age_str))
+    finally:
         print("Thank you for you interest")
 
 
