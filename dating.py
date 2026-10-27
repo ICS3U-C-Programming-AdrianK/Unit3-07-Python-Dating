@@ -18,10 +18,12 @@ def main():
         # check eligibility
         if candidate_age_int > constants.MIN and candidate_age_int < constants.MAX:
             print("you can date my grandchild")
-        elif candidate_age_int <= constants.MIN:
+        elif candidate_age_int <= constants.MIN and candidate_age_int >= 0:
             print("you are too young to date my grandchild")
         elif candidate_age_int >= constants.MAX:
             print("you are too old to date my grandchild")
+        elif candidate_age_int < 0:
+            print("Please enter a valid integer")
     except ValueError:
         print("{} is not an integer".format(candidate_age_str))
     finally:
